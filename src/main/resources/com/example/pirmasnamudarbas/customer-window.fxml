@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="299.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pirmasnamudarbas.controllers.CustomerWindow">
+   <children>
+      <TabPane prefHeight="339.0" prefWidth="519.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Profile">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="482.0">
+                     <children>
+                        <Label layoutX="17.0" layoutY="14.0" text="User name:" />
+                        <Label layoutX="17.0" layoutY="43.0" text="Email:" />
+                        <Label layoutX="17.0" layoutY="72.0" text="Creation date:" />
+                        <Text fx:id="userName" layoutX="113.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="134.93670654296875" />
+                        <Text fx:id="email" layoutX="113.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="152.5367431640625" />
+                        <Text fx:id="creationDate" layoutX="113.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="68.5367431640625" />
+                        <Button fx:id="quitButton" layoutX="446.0" layoutY="271.0" mnemonicParsing="false" onAction="#quit" text="Quit" />
+                        <Label layoutX="19.0" layoutY="103.0" text="Days used:" />
+                        <Text fx:id="daysUsed" layoutX="113.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="59.73675537109375" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="My Sport Programs">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="mySportPrograms" layoutX="14.0" layoutY="14.0" onMouseClicked="#showDescription" prefHeight="241.0" prefWidth="227.0" />
+                        <Button fx:id="orderNewProgram" layoutX="385.0" layoutY="270.0" mnemonicParsing="false" onAction="#goToOrderForm" text="Order New Program" />
+                        <Text fx:id="textOrders" layoutX="260.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="202.93670654296875" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Orders">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="orders" onMouseClicked="#activateButton" prefHeight="242.0" prefWidth="519.0" />
+                        <Button fx:id="deleteButton" layoutX="453.0" layoutY="271.0" mnemonicParsing="false" onAction="#deleteOrder" text="Delete" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
