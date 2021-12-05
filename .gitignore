@@ -1,0 +1,8 @@
+/build/
+/nbproject/
+/manifest.mf
+/build.xml
+/nb-configuration.xml
+/target/
+/.idea
+/lib
